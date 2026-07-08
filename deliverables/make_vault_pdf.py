@@ -1,4 +1,4 @@
-"""Generate the luxury black+gold delivery PDF for a reels bundle.
+﻿"""Generate the luxury black+gold delivery PDF for a reels bundle.
 
 Edit REELS below (or pass a different bundle config) and re-run:
     python make_vault_pdf.py
@@ -16,10 +16,10 @@ TEXT = HexColor("#f2efe6")
 MUTED = HexColor("#9b978c")
 
 BUNDLE_NAME = "Creator Pro Vault"
-BUNDLE_SUB = "150 Luxury Reels · 4K + Full HD · Watermark-free"
+BUNDLE_SUB = "150 Luxury Reels Â· 4K + Full HD Â· Watermark-free"
 STORE = "Luxe Reels Vault"
 
-# ── Replace these with your real reel download links ──────────
+# â”€â”€ Replace these with your real reel download links â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 CATEGORIES = [
     ("Supercars", 30),
     ("Luxury Watches", 30),
@@ -51,10 +51,10 @@ def gold_rule(y, x0=60, x1=W - 60):
 def footer(page_num):
     c.setFont("Helvetica", 8)
     c.setFillColor(MUTED)
-    c.drawCentredString(W / 2, 34, f"{STORE}  ·  {BUNDLE_NAME}  ·  Page {page_num}")
+    c.drawCentredString(W / 2, 34, f"{STORE}  Â·  {BUNDLE_NAME}  Â·  Page {page_num}")
 
 
-# ── Cover page ────────────────────────────────────────────────
+# â”€â”€ Cover page â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 bg()
 c.setStrokeColor(GOLD)
 c.setLineWidth(1.2)
@@ -64,7 +64,7 @@ c.rect(48, 48, W - 96, H - 96, stroke=1, fill=0)
 
 c.setFillColor(GOLD_BRIGHT)
 c.setFont("Helvetica", 11)
-c.drawCentredString(W / 2, H - 200, "✦   P R E M I U M   C O N T E N T   V A U L T   ✦".replace("✦", "*"))
+c.drawCentredString(W / 2, H - 200, "âœ¦   P R E M I U M   C O N T E N T   V A U L T   âœ¦".replace("âœ¦", "*"))
 
 c.setFillColor(TEXT)
 c.setFont("Times-Bold", 44)
@@ -92,17 +92,17 @@ c.setFillColor(TEXT)
 c.setFont("Helvetica", 10)
 for i, line in enumerate([
     "1.  Click any link below (or copy it into your browser) to download the reel.",
-    "2.  Post directly to your Instagram page — all reels are watermark-free.",
+    "2.  Post directly to your Instagram page â€” all reels are watermark-free.",
     "3.  Pair with trending audio and the hook captions included in your bundle.",
 ]):
     c.drawString(130, 254 - i * 22, line)
 
 c.setFillColor(MUTED)
 c.setFont("Helvetica", 8)
-c.drawCentredString(W / 2, 120, f"© 2026 {STORE} · For the buyer's use only · Please do not reshare this document")
+c.drawCentredString(W / 2, 120, f"Â© 2026 {STORE} Â· For the buyer's use only Â· Please do not reshare this document")
 c.showPage()
 
-# ── Link pages ────────────────────────────────────────────────
+# â”€â”€ Link pages â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 page = 2
 reel_no = 0
 y = 0
@@ -159,7 +159,7 @@ for cat, count in CATEGORIES:
     c.showPage()
     page += 1
 
-# ── Bonus / support page ──────────────────────────────────────
+# â”€â”€ Bonus / support page â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 bg()
 c.setFillColor(GOLD_BRIGHT)
 c.setFont("Times-Bold", 24)
@@ -180,15 +180,15 @@ c.setFillColor(TEXT)
 c.setFont("Helvetica", 10)
 for i, line in enumerate([
     "A link not working?  DM us on Instagram with your Payment ID",
-    "and the reel number — we'll fix it within 24 hours.",
+    "and the reel number â€” we'll fix it within 24 hours.",
     "",
-    "Instagram:  @your_handle_here",
+    "Instagram:  @the.millionaire.frame",
 ]):
     c.drawCentredString(W / 2, H - 305 - i * 20, line)
 
 c.setFillColor(MUTED)
 c.setFont("Helvetica", 8)
-c.drawCentredString(W / 2, 60, f"© 2026 {STORE} · Thank you for building your empire with us")
+c.drawCentredString(W / 2, 60, f"Â© 2026 {STORE} Â· Thank you for building your empire with us")
 footer(page)
 c.showPage()
 

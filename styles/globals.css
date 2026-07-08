@@ -392,6 +392,84 @@ footer .fine {
   margin-top: 8px;
 }
 
+footer .fine a {
+  color: var(--gold-bright);
+  text-decoration: none;
+}
+
+footer .fine a:hover {
+  text-decoration: underline;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 26px;
+  margin-top: 18px;
+  font-family: "Inter", sans-serif;
+}
+
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+.footer-links a:hover {
+  color: var(--gold-bright);
+}
+
+/* ── Legal pages ─────────────────────────── */
+.legal {
+  max-width: 720px;
+  padding-top: 56px;
+}
+
+.legal > .back {
+  display: inline-block;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 34px;
+}
+
+.legal > .back:hover {
+  color: var(--gold-bright);
+}
+
+.legal h1 {
+  font-size: clamp(30px, 5vw, 42px);
+  margin-bottom: 6px;
+}
+
+.legal .updated {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 34px;
+}
+
+.legal h2 {
+  font-size: 20px;
+  color: var(--gold-bright);
+  margin: 30px 0 10px;
+}
+
+.legal p {
+  color: #cfcabc;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.legal p a {
+  color: var(--gold-bright);
+}
+
+.legal footer {
+  margin-top: 64px;
+}
+
 /* ── Success page ────────────────────────── */
 .success-page {
   min-height: 100vh;
@@ -455,6 +533,11 @@ footer .fine {
   color: var(--muted);
   font-size: 12.5px;
   margin-top: 8px;
+}
+
+.receipt a,
+.success-card .error a {
+  color: var(--gold-bright);
 }
 
 .back {

@@ -33,8 +33,16 @@ export default function Success({ bundleName, reels, paymentId, driveLink }) {
           </a>
         ) : (
           <p className="error">
-            Your payment is confirmed, but the delivery link isn&apos;t configured yet.
-            DM us on Instagram with your payment ID and we&apos;ll send it right away.
+            Your payment is confirmed, but the delivery link isn&apos;t configured yet. DM us
+            on Instagram at{" "}
+            <a
+              href="https://www.instagram.com/the.millionaire.frame"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @the.millionaire.frame
+            </a>{" "}
+            with your payment ID and we&apos;ll send it right away.
           </p>
         )}
 
@@ -44,7 +52,15 @@ export default function Success({ bundleName, reels, paymentId, driveLink }) {
           </p>
           <p className="fine">
             Save this page or screenshot your payment ID. Inside the Drive folder you&apos;ll
-            find a PDF with download links for every reel in your bundle.
+            find a PDF with download links for every reel in your bundle. Need help? DM{" "}
+            <a
+              href="https://www.instagram.com/the.millionaire.frame"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @the.millionaire.frame
+            </a>
+            .
           </p>
         </div>
 

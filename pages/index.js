@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { PRODUCTS } from "../lib/products";
+import SiteFooter from "../components/SiteFooter";
 
 const FAQS = [
   {
@@ -188,12 +189,7 @@ export default function Home() {
         ))}
       </section>
 
-      <footer>
-        <p>💎 Luxe Reels Vault</p>
-        <p className="fine">
-          Instant digital delivery · One-time payment · Support: DM us on Instagram
-        </p>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }
