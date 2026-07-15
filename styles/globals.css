@@ -552,11 +552,114 @@ footer .fine a:hover {
   color: var(--gold-bright);
 }
 
+/* ── Checkout modal ──────────────────────── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 4, 6, 0.78);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 100;
+}
+
+.modal {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 40px 34px 30px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 24px 90px rgba(0, 0, 0, 0.6);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: var(--text);
+}
+
+.modal h3 {
+  font-size: 26px;
+}
+
+.modal-sub {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.modal-price {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  color: var(--gold-bright);
+  margin: 6px 0 22px;
+}
+
+.modal label {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+}
+
+.modal input {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px 14px;
+  background: var(--bg-soft);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+}
+
+.modal input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.modal .btn.big {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.modal-error {
+  margin: 4px 0 14px;
+  padding: 10px 14px;
+}
+
+.modal-fine {
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+  margin-top: 16px;
+}
+
 @media (max-width: 600px) {
   .hero {
     padding-top: 72px;
   }
   .success-card {
     padding: 40px 24px;
+  }
+  .modal {
+    padding: 36px 22px 26px;
   }
 }
